@@ -1,0 +1,34 @@
+.socials {
+  flex-direction: column;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  // grid-column: 1;
+  position: fixed;
+  // grid-row: 1 / span 3;
+  bottom: 0;
+  gap: 30px;
+  width: max-content;
+  .social {
+    svg {
+      fill: $clr2;
+      //   width: 60px;
+      //   transform: scale(9vw);
+      font-size: 2.5vw;
+      &:hover {
+        fill: $clr3;
+      }
+    }
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100px;
+    margin: 0px auto;
+    background-color: $clr2;
+  }
+  @media (max-width: 950px) {
+    display: none;
+  }
+}

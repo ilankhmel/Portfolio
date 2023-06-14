@@ -1,0 +1,126 @@
+.projects {
+  margin-bottom: 3vw !important;
+  .project-card {
+    margin-bottom: 5vw;
+    // display: flex;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 2vw 1fr 2vw;
+    position: relative;
+    .details {
+      z-index: 2;
+      height: max-content;
+      align-self: center;
+      grid-row: 2;
+      h2 {
+        margin-bottom: 2vw;
+      }
+      h3 {
+        font-family: $font-mono;
+        color: $clr5;
+        font-size: clamp(14px, 1vw, 50px);
+      }
+      p {
+        background-color: $clr6;
+        padding: 2vw;
+        border-radius: 7px;
+        color: $clr7;
+      }
+      ul {
+        font-family: $font-mono;
+        display: flex;
+        justify-content: start;
+        padding-left: 0;
+        gap: 2vw;
+        li {
+          list-style-type: none;
+        }
+      }
+    }
+
+    .image {
+      position: relative;
+      grid-row: 1/-1;
+      transition: all 0.3s;
+      cursor: pointer;
+      border-radius: 5px;
+
+      &::after {
+        border-radius: 5px;
+
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0c675243;
+        opacity: 100%;
+        transition: all 0.6;
+      }
+
+      img {
+        filter: grayscale(100%);
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left;
+      }
+
+      &:hover {
+        &::after {
+          transition: all 0.6s;
+          opacity: 0%;
+        }
+        img {
+          filter: grayscale(0%);
+          filter: brightness(60%);
+        }
+      }
+    }
+
+    &.even {
+      .details {
+        grid-column: 1/9;
+      }
+      .image {
+        grid-column: 5/-1;
+      }
+    }
+
+    &.odd {
+      .details {
+        grid-column: 5/-1;
+      }
+      .image {
+        grid-column: 1/9;
+      }
+    }
+  }
+
+  @media (max-width: 950px) {
+    .project-card {
+      &.even,
+      &.odd {
+        .details {
+          grid-column: 1/-1;
+          padding: 3vw;
+          p {
+            padding: 0;
+            background-color: transparent;
+          }
+        }
+        .image {
+          grid-column: 1/-1;
+          filter: brightness(40%);
+          transition: all 0.4s;
+
+          &:hover {
+            filter: brightness(60%);
+          }
+        }
+      }
+    }
+  }
+}

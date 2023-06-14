@@ -1,0 +1,24 @@
+// COLOR PALETTE
+$clr1: #0a192f;
+$clr2: #8892b0;
+$clr3: #ccd6f6;
+$clr4: #233554;
+$clr5: #64ffda;
+$clr6: #112240;
+$clr7: #a8b2d1;
+
+// LAYOUT
+$layoutPadding: 70px;
+
+// LAYOUT BREAKPOINTS
+$break-narrow: 1200px;
+$break-normal: 1360px;
+$break-wide: 1920px;
+
+$padded-break-narrow: $break-narrow + $layoutPadding * 2;
+$padded-break-normal: $break-normal + $layoutPadding * 2;
+$padded-break-wide: $break-wide + $layoutPadding * 2;
+
+//Fonts
+
+$font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;

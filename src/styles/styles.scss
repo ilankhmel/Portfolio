@@ -1,0 +1,22 @@
+// SETUP
+@import "setup/typography";
+@import "setup/variables";
+@import "setup/mixins";
+@import "setup/functions";
+
+// BASICS
+@import "basics/helpers";
+@import "basics/base";
+@import "basics/layout";
+
+// COMPONENTS
+@import "components/App";
+@import "components/Hero";
+@import "components/Topbar";
+@import "components/Email";
+@import "components/Socials";
+@import "components/AboutMe";
+@import "components/Work";
+@import "components/Projects";
+@import "components/GetInTouch";
+@import "components/MobileNav";
