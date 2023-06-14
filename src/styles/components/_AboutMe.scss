@@ -25,9 +25,10 @@
     align-items: start;
     gap: 5vw;
     .info {
-      font-size: clamp(20px, 1.1vw, 80px);
+      // font-size: clamp(14px, 1.1vw, 80px);
 
       p {
+        font-size: clamp(14px, 1.1vw, 80px);
         margin-bottom: 2vw;
       }
 

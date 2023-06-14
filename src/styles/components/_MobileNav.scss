@@ -7,14 +7,21 @@
   top: 0;
   z-index: 50;
   width: clamp(120px, 32vw, 200px);
+  height: 100vh;
+  background-color: #112240;
   .nav-items {
     height: 100vh;
-    background-color: #112240;
     color: $clr3;
     flex-direction: column;
     gap: clamp(30px, 8vw, 50px);
     z-index: 5;
     justify-content: center;
+    a {
+      color: $clr3;
+      &:hover {
+        color: $clr5;
+      }
+    }
     .nav-item {
       font-size: clamp(14px, 3vw, 16px);
       align-items: center;

@@ -18,8 +18,8 @@ function App() {
   }, [isMenu]);
   return (
     <div className={isMenu ? "app menu" : "app"}>
-      <MobileNav isMenu={isMenu} />
-      {isMenu && <div className="blur"></div>}
+      <MobileNav isMenu={isMenu} setIsMenu={setIsMenu} />
+      {isMenu && <div className="blur" onClick={() => setIsMenu(false)}></div>}
       <div className="app-container">
         <Topbar isMenu={isMenu} setIsMenu={setIsMenu} />
         <Hero />

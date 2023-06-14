@@ -15,10 +15,6 @@ html {
   line-height: 1.2;
   line-height: lh(20px);
   font-family: Inter;
-
-  @media (max-width: 1300px) {
-    // font-size: 13px;
-  }
 }
 
 body {
@@ -32,6 +28,7 @@ body {
     }
 
     .blur {
+      cursor: pointer;
       position: fixed;
       top: 0;
       left: 0;
@@ -186,6 +183,8 @@ mark {
 ::-webkit-scrollbar {
   box-sizing: border-box;
   width: 2px;
+  height: 3px;
+
   border-radius: 12px;
 }
 
@@ -196,12 +195,12 @@ mark {
 
 /* Gray color on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #cccccc6d;
+  background-color: $clr2;
 }
 
 /* Light gray thumb color */
 ::-webkit-scrollbar-thumb {
-  background-color: #cccccc7e;
+  background-color: $clr2;
   width: 2px;
 }
 
